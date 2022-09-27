@@ -1,4 +1,11 @@
 # Changelog
+## 1.5.0 (2022-09-27)
+- feature: update frontend to v1.5.0
+    - replace some outdated links and text
+    - add a favicon
+    - drop IE11 support
+    - modernize the login button setup
+    - maintenance work
 ## 1.4.0 (2022-07-27)
 - update forms
 ## 1.3.1 (2022-06-22)

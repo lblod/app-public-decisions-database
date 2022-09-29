@@ -1,4 +1,6 @@
 # Changelog
+## 1.5.1 (2022-09-29)
+- Update OVO code kabinet Somers
 ## 1.5.0 (2022-09-27)
 - feature: update frontend to v1.5.0
     - replace some outdated links and text

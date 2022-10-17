@@ -1,4 +1,6 @@
 # Changelog
+## 1.6.0 (2022-10-17)
+- bump consumer
 ## 1.5.1 (2022-09-29)
 - Update OVO code kabinet Somers
 ## 1.5.0 (2022-09-27)

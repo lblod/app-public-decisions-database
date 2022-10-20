@@ -1,4 +1,6 @@
 # Changelog
+## 1.7.1 (2022-10-20)
+- bump consumer
 ## 1.7.0 (2022-10-20)
 - bump consumer
 - added new formsp

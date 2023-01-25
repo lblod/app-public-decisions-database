@@ -1,4 +1,7 @@
 # Changelog
+## 1.9.0 (2023-01-25)
+- new updated forms
+- update ES config (needs re-index)
 ## 1.8.0 (2022-11-08)
 - new updated forms
 ## 1.7.2 (2022-10-20)

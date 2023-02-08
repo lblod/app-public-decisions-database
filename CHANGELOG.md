@@ -1,4 +1,6 @@
 # Changelog
+## 1.10.0 (2023-02-08)
+- update forms
 ## 1.9.1 (2023-01-26)
 - revert additive indexes setting
 ## 1.9.0 (2023-01-25)

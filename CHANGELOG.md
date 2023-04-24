@@ -1,4 +1,6 @@
 # Changelog
+## 1.11.0 (2023-04-24)
+- update forms
 ## 1.10.1 (2023-04-08)
 - adjusted schorsing beslissing eredienstbesturen form for deputatie
 ## 1.10.0 (2023-02-08)

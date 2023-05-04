@@ -1,0 +1,13 @@
+PREFIX rdf:	<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos:	<http://www.w3.org/2004/02/skos/core#>
+
+INSERT DATA {
+  GRAPH <http://mu.semte.ch/graphs/public> {
+    <http://data.lblod.info/id/bestuurseenheden/0a2af324-e4d2-4b6d-9d81-1b50198762a>
+      rdf:type	<http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> ;
+      skos:prefLabel	"Vereniging van Vlaamse Steden en Gemeenten" ;
+      skos:altLabel "vvsg";
+      <http://mu.semte.ch/vocabularies/core/uuid>	"0a2af324-e4d2-4b6d-9d81-1b50198762af" ;
+      <http://purl.org/dc/terms/identifier>	"0451857573".
+  }
+}

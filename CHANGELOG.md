@@ -1,4 +1,7 @@
 # Changelog
+## 1.13.0 (2023-06-30)
+- added new forms
+- update organen bestuurslabels
 ## 1.12.0 (2023-05-05)
 - added VVSG
 ## 1.11.0 (2023-04-24)

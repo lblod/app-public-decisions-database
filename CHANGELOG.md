@@ -1,4 +1,8 @@
 # Changelog
+## 1.14.0 (2023-10-17)
+- update forms
+### Deploy instructions
+- drc restart migrations
 ## 1.13.0 (2023-06-30)
 - added new forms
 - update organen bestuurslabels

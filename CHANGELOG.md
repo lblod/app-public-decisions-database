@@ -1,4 +1,12 @@
 # Changelog
+## 1.17.0 (2024-01-12)
+- Update forms
+    - New forms LEKP Collectieve Energiebesparende Renovatie, Fietspaden, Sloopbeleidsplan
+    - New forms Niet-bindend advies op statuten and Niet-bindend advies op oprichting
+    - Change form LEKP Melding correctie authentieke bron, removed field "type correctie"
+- Bump frontend (ACM/IDM change), see https://github.com/lblod/frontend-public-decisions/blob/master/CHANGELOG.md#v170-2024-01-05
+### Deploy instructions
+- drc up -d enrich-submission frontend; drc restart migrations resource cache dispatcher
 ## 1.16.0 (2023-11-15)
 - update forms
 ### Deploy instructions

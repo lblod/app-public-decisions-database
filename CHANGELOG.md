@@ -1,4 +1,8 @@
 # Changelog
+## Unreleased
+- Frontend [v1.8.0](https://github.com/lblod/frontend-public-decisions/blob/master/CHANGELOG.md#v180-2024-03-13) (DL-5735)
+### Deploy instructions
+- drc up -d frontend
 ## 1.17.0 (2024-01-12)
 - Update forms
     - New forms LEKP Collectieve Energiebesparende Renovatie, Fietspaden, Sloopbeleidsplan

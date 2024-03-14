@@ -1,8 +1,15 @@
 # Changelog
-## Unreleased
+## 1.18.0 (2024-03-14)
+- Update forms
+  - Adding new form Aanduiding en eedaflegging van de aangewezen burgemeester (DL-5669)
+  - Adding new form Strandconcessies - reddingsdiensten kustgemeenten (DL-5625)
+  - Adding new form Melding onvolledigheid inzending eredienstbestuur (DL-5643)
+  - Adding new form Opstart beroepsprocedure naar aanleiding van een beslissing (DL-5646)
+  - Adding informational text to forms to minimize usage of the wrong forms (DL-5665)
+  - Adding new form Afschrift erkenningszoekende besturen (DL-5670)
 - Frontend [v1.8.0](https://github.com/lblod/frontend-public-decisions/blob/master/CHANGELOG.md#v180-2024-03-13) (DL-5735)
 ### Deploy instructions
-- drc up -d frontend
+- drc up -d enrich-submission frontend; drc restart migrations resource cache
 ## 1.17.0 (2024-01-12)
 - Update forms
     - New forms LEKP Collectieve Energiebesparende Renovatie, Fietspaden, Sloopbeleidsplan

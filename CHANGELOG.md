@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## 1.19.0 (2024-05-16)
 
 ### General
 - Update forms

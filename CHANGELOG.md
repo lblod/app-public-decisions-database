@@ -1,4 +1,10 @@
 # Changelog
+
+## 1.19.2 (2024-10-11)
+
+- Bump `enrich-submission-service` to latest version
+- Updated to new semantic form file
+
 ## 1.19.1 (2024-05-29)
   - Fix custom info label field in forms LEKP-rapport - Melding correctie authentieke bron and LEKP-rapport - Toelichting Lokaal Bestuur (DL-5934)
 ### Deploy Notes

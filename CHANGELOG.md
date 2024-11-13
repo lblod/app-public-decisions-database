@@ -1,5 +1,12 @@
 # Changelog
+## 1.19.3 (2024-10-13)
+### Toezicht
+ - Update URI form "Aangewezen Burgemeester" [DL-6298]
 
+### Deploy notes
+```
+drc restart migrations; drc up -d enrich-submission
+```
 ## 1.19.2 (2024-10-11)
 
 - Bump `enrich-submission-service` to latest version

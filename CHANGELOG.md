@@ -1,4 +1,7 @@
 # Changelog
+## Unreleased
+- New semantic form `Kerkenbeleidsplan`
+- New semantic forms for cross referencing
 ## 1.19.3 (2024-10-13)
 ### Toezicht
  - Update URI form "Aangewezen Burgemeester" [DL-6298]

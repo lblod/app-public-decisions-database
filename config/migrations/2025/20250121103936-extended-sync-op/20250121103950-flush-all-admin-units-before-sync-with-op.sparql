@@ -349,20 +349,6 @@ WHERE {
   }
 };
 
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://www.w3.org/ns/adms#Identifier> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#notation>
-      <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
-    }
-  }
-};
 
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }

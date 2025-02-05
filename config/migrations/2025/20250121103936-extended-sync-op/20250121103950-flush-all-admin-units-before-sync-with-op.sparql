@@ -44,6 +44,7 @@ WHERE {
        <http://data.vlaanderen.be/ns/besluit#classificatie>
        <http://data.vlaanderen.be/ns/mandaat#isTijdspecialisatieVan>
        <http://mu.semte.ch/vocabularies/ext/kbonummer>
+       <http://purl.org/dc/terms/identifier>
     }
   }
 }

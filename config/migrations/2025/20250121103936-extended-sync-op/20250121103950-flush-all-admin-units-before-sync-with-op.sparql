@@ -7,6 +7,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 # First remove the extra mappings.
 # This based on the conversion from the export.json of the op-producer.
 #######################################################################
+# data in both graphs
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?s ?p ?o.
@@ -51,6 +52,7 @@ WHERE {
 
 ;
 
+# no data found
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?s a besluit:Bestuurseenheid, ere:BestuurVanDeEredienst;
@@ -65,6 +67,7 @@ DELETE {
 
 ;
 
+# no data found
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?s a besluit:Bestuurseenheid, ere:CentraalBestuurVanDeEredienst;
@@ -79,6 +82,7 @@ DELETE {
 
 ;
 
+# no data found
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?s a besluit:Bestuurseenheid;
@@ -94,6 +98,7 @@ DELETE {
 
 ;
 
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?s a <http://mu.semte.ch/vocabularies/ext/BestuurseenheidClassificatieCode>.
@@ -117,6 +122,7 @@ WHERE {
 # This is a conversion from the export.json of the op-producer.
 # If you need to re-init; check again export.json from the op-producer
 #######################################################################
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -147,6 +153,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -174,6 +181,7 @@ WHERE {
   }
 };
 
+# data in both graphs
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -208,6 +216,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -239,6 +248,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -259,6 +269,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -275,6 +286,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -290,6 +302,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -306,6 +319,7 @@ WHERE {
   }
 };
 
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -329,6 +343,7 @@ WHERE {
   }
 };
 
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -350,6 +365,7 @@ WHERE {
 };
 
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -365,6 +381,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -379,6 +396,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -393,6 +411,7 @@ WHERE {
   }
 };
 
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -407,6 +426,7 @@ WHERE {
   }
 };
 
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -427,6 +447,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -441,6 +462,7 @@ WHERE {
   }
 };
 
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -455,6 +477,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -477,6 +500,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -491,6 +515,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -505,6 +530,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -519,6 +545,7 @@ WHERE {
   }
 };
 
+#no data found, might not be needed
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }
@@ -533,6 +560,7 @@ WHERE {
   }
 };
 
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
 }

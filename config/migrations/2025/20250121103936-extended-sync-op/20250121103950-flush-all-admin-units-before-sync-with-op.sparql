@@ -52,52 +52,6 @@ WHERE {
 
 ;
 
-# no data found
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a besluit:Bestuurseenheid, ere:BestuurVanDeEredienst;
-      skos:topConceptOf <http://lblod.data.gift/concept-schemes/7e2b965e-c824-474f-b5d5-b1c115740083> ;
-      skos:inScheme <http://lblod.data.gift/concept-schemes/7e2b965e-c824-474f-b5d5-b1c115740083> .
-  }
-} WHERE {
-   GRAPH <http://mu.semte.ch/graphs/public> {
-     ?s a ere:BestuurVanDeEredienst.
-  }
-}
-
-;
-
-# no data found
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a besluit:Bestuurseenheid, ere:CentraalBestuurVanDeEredienst;
-      skos:topConceptOf <http://lblod.data.gift/concept-schemes/7e2b965e-c824-474f-b5d5-b1c115740083> ;
-      skos:inScheme <http://lblod.data.gift/concept-schemes/7e2b965e-c824-474f-b5d5-b1c115740083> .
-  }
-} WHERE {
-    GRAPH <http://mu.semte.ch/graphs/public> {
-      ?s a ere:CentraalBestuurVanDeEredienst.
-    }
-}
-
-;
-
-# no data found
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a besluit:Bestuurseenheid;
-      besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/36372fad-0358-499c-a4e3-f412d2eae213>;
-      skos:topConceptOf <http://lblod.data.gift/concept-schemes/7e2b965e-c824-474f-b5d5-b1c115740083> ;
-      skos:inScheme <http://lblod.data.gift/concept-schemes/7e2b965e-c824-474f-b5d5-b1c115740083> .
-  }
-} WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s besluit:classificatie <http://data.vlaanderen.be/id/concept/BestuurseenheidClassificatieCode/36372fad-0358-499c-a4e3-f412d2eae213>.
-  }
-}
-
-;
-
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
@@ -122,64 +76,6 @@ WHERE {
 # This is a conversion from the export.json of the op-producer.
 # If you need to re-init; check again export.json from the op-producer
 #######################################################################
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#prefLabel>
-      <http://www.w3.org/ns/regorg#legalName>
-      <http://www.w3.org/2004/02/skos/core#altLabel>
-      <http://www.w3.org/ns/adms#identifier>
-      <http://www.w3.org/ns/regorg#orgStatus>
-      <http://www.w3.org/ns/org#hasPrimarySite>
-      <http://www.w3.org/ns/org#hasSite>
-      <http://www.w3.org/ns/org#changedBy>
-      <http://www.w3.org/ns/org#resultedFrom>
-      <http://www.w3.org/ns/org#hasPost>
-      <http://www.w3.org/ns/org#linkedTo>
-      <http://www.w3.org/ns/org#hasSubOrganization>
-      <http://www.w3.org/ns/org#classification>
-      <http://data.lblod.info/vocabularies/erediensten/denominatie>
-      <http://data.lblod.info/vocabularies/erediensten/grensoverschrijdend>
-      <http://data.lblod.info/vocabularies/erediensten/wordtBediendDoor>
-      <http://data.lblod.info/vocabularies/erediensten/typeEredienst>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#prefLabel>
-      <http://www.w3.org/ns/regorg#legalName>
-      <http://www.w3.org/2004/02/skos/core#altLabel>
-      <http://www.w3.org/ns/adms#identifier>
-      <http://www.w3.org/ns/regorg#orgStatus>
-      <http://www.w3.org/ns/org#hasPrimarySite>
-      <http://www.w3.org/ns/org#hasSite>
-      <http://www.w3.org/ns/org#changedBy>
-      <http://www.w3.org/ns/org#resultedFrom>
-      <http://www.w3.org/ns/org#hasPost>
-      <http://www.w3.org/ns/org#linkedTo>
-      <http://www.w3.org/ns/org#hasSubOrganization>
-      <http://www.w3.org/ns/org#classification>
-      <http://data.lblod.info/vocabularies/erediensten/typeEredienst>
-    }
-  }
-};
 
 # data in both graphs
 DELETE {
@@ -212,109 +108,6 @@ WHERE {
       <http://www.w3.org/ns/org#linkedTo>
       <http://www.w3.org/ns/org#resultedFrom>
       <http://www.w3.org/ns/regorg#orgStatus>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://www.w3.org/ns/regorg#RegisteredOrganization> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://data.vlaanderen.be/ns/besluit#werkingsgebied>
-      <http://www.opengis.net/ont/geosparql#sfWithin>
-      <http://www.w3.org/2002/07/owl#sameAs>
-      <http://www.w3.org/2004/02/skos/core#altLabel>
-      <http://www.w3.org/2004/02/skos/core#prefLabel>
-      <http://www.w3.org/ns/regorg#legalName>
-      <http://www.w3.org/ns/adms#identifier>
-      <http://www.w3.org/ns/org#changedBy>
-      <http://www.w3.org/ns/org#classification>
-      <http://www.w3.org/ns/org#hasPost>
-      <http://www.w3.org/ns/org#hasPrimarySite>
-      <http://www.w3.org/ns/org#hasSite>
-      <http://www.w3.org/ns/org#hasSubOrganization>
-      <http://www.w3.org/ns/org#linkedTo>
-      <http://www.w3.org/ns/org#resultedFrom>
-      <http://www.w3.org/ns/regorg#orgStatus>
-      <https://data.lblod.info/vocabularies/generiek/geplandeEindDatum>
-      <http://www.w3.org/ns/org#purpose>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#prefLabel>
-      <http://www.w3.org/ns/regorg#legalName>
-      <http://www.w3.org/2004/02/skos/core#altLabel>
-      <http://www.w3.org/ns/org#linkedTo>
-      <http://data.lblod.info/vocabularies/erediensten/typeEredienst>
-      <http://www.w3.org/ns/org#classification>
-      <http://www.w3.org/ns/adms#identifier>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://data.lblod.info/vocabularies/erediensten/BetrokkenLokaleBesturen> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://data.lblod.info/vocabularies/erediensten/typebetrokkenheid>
-      <http://www.w3.org/ns/org#organization>
-      <http://data.lblod.info/vocabularies/erediensten/financieringspercentage>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://data.lblod.info/vocabularies/erediensten/PositieBedienaar> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/ns/org#role>
-      <http://data.lblod.info/vocabularies/erediensten/functie>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://www.w3.org/ns/org#Site> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/ns/org#siteAddress>
-      <https://data.vlaanderen.be/ns/organisatie#bestaatUit>
-      <http://data.lblod.info/vocabularies/erediensten/vestigingstype>
     }
   }
 };
@@ -364,53 +157,6 @@ WHERE {
   }
 };
 
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://www.w3.org/ns/adms#Identifier> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#notation>
-      <https://data.vlaanderen.be/ns/generiek#gestructureerdeIdentificator>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <https://data.vlaanderen.be/ns/generiek#lokaleIdentificator>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <https://data.vlaanderen.be/ns/generiek#lokaleIdentificator>
-    }
-  }
-};
-
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
@@ -447,21 +193,6 @@ WHERE {
   }
 };
 
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://lblod.data.gift/vocabularies/organisatie/TypeEredienst> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#prefLabel>
-    }
-  }
-};
-
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
@@ -473,89 +204,6 @@ WHERE {
     VALUES ?p {
       <http://mu.semte.ch/vocabularies/core/uuid>
       <http://www.w3.org/2004/02/skos/core#prefLabel>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://www.w3.org/ns/org#ChangeEvent> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://purl.org/dc/terms/date>
-      <http://purl.org/dc/terms/description>
-      <http://data.lblod.info/vocabularies/contacthub/typeWijziging>
-      <http://www.w3.org/ns/org#resultedFrom>
-      <http://www.w3.org/ns/org#changedBy>
-      <http://lblod.data.gift/vocabularies/organisatie/veranderingsgebeurtenisResultaat>
-      <http://www.w3.org/ns/org#originalOrganization>
-      <http://www.w3.org/ns/org#resultingOrganization>
-      <http://data.europa.eu/m8g/hasFormalFramework>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#prefLabel>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#prefLabel>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://lblod.data.gift/vocabularies/organisatie/TypeVestiging> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/2004/02/skos/core#prefLabel>
-    }
-  }
-};
-
-#no data found, might not be needed
-DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
-}
-WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
-    ?s a <http://data.vlaanderen.be/ns/mandaat#Mandaat> ;
-       ?p ?o.
-    VALUES ?p {
-      <http://mu.semte.ch/vocabularies/core/uuid>
-      <http://www.w3.org/ns/org#role>
     }
   }
 };
@@ -576,6 +224,7 @@ WHERE {
   }
 };
 
+# data in both graphs
 DELETE {
   GRAPH <http://mu.semte.ch/graphs/public> {
     ?s a ?type .

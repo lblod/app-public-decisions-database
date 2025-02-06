@@ -54,12 +54,12 @@ WHERE {
 
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://mu.semte.ch/vocabularies/ext/BestuurseenheidClassificatieCode>.
   }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://mu.semte.ch/vocabularies/ext/BestuurseenheidClassificatieCode>.
   }
 }
@@ -114,10 +114,10 @@ WHERE {
 
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://www.w3.org/ns/locn#Address> ;
        ?p ?o.
     VALUES ?p {
@@ -138,10 +138,10 @@ WHERE {
 
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://schema.org/ContactPoint> ;
        ?p ?o.
     VALUES ?p {
@@ -159,10 +159,10 @@ WHERE {
 
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://lblod.data.gift/vocabularies/organisatie/BestuurseenheidClassificatieCode> ;
        ?p ?o.
     VALUES ?p {
@@ -174,10 +174,10 @@ WHERE {
 
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> ;
        ?p ?o.
     VALUES ?p {
@@ -195,10 +195,10 @@ WHERE {
 
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://lblod.data.gift/vocabularies/organisatie/BestuursorgaanClassificatieCode> ;
        ?p ?o.
     VALUES ?p {
@@ -210,10 +210,10 @@ WHERE {
 
 # ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://data.lblod.info/vocabularies/leidinggevenden/Bestuursfunctie> ;
        ?p ?o.
     VALUES ?p {

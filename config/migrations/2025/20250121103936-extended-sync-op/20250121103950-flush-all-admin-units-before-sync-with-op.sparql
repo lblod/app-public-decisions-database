@@ -9,12 +9,12 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 #######################################################################
 # data in both graphs
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s ?p ?o.
   }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a ?type ;
       ?p ?o.
     VALUES ?type {
@@ -79,10 +79,10 @@ WHERE {
 
 # data in both graphs
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> { ?s ?p ?o. }
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> ;
        ?p ?o.
     VALUES ?p {
@@ -226,12 +226,12 @@ WHERE {
 
 # data in both graphs
 DELETE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a ?type .
   }
 }
 WHERE {
-  GRAPH <http://mu.semte.ch/graphs/public> {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
     ?s a ?type .
     VALUES ?type {
       <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst>

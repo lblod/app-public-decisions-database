@@ -1,0 +1,266 @@
+PREFIX besluit: <http://data.vlaanderen.be/ns/besluit#>
+PREFIX ere: <http://data.lblod.info/vocabularies/erediensten/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+#######################################################################
+# START
+# First remove the extra mappings.
+# This based on the conversion from the export.json of the op-producer.
+#######################################################################
+# data in both graphs
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s ?p ?o.
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a ?type ;
+      ?p ?o.
+    VALUES ?type {
+      <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst>
+      <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>
+      <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>
+      <http://www.w3.org/ns/regorg#RegisteredOrganization>
+      <http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan>
+      <http://data.lblod.info/vocabularies/erediensten/BetrokkenLokaleBesturen>
+      <http://data.lblod.info/vocabularies/erediensten/PositieBedienaar>
+      <http://www.w3.org/ns/org#Site>
+      <http://www.w3.org/ns/locn#Address>
+      <http://schema.org/ContactPoint>
+      <http://www.w3.org/ns/adms#Identifier>
+      <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>
+      <http://lblod.data.gift/vocabularies/organisatie/BestuurseenheidClassificatieCode>
+      <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan>
+      <http://lblod.data.gift/vocabularies/organisatie/TypeEredienst>
+      <http://lblod.data.gift/vocabularies/organisatie/BestuursorgaanClassificatieCode>
+      <http://www.w3.org/ns/org#ChangeEvent>
+      <http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis>
+      <http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode>
+      <http://lblod.data.gift/vocabularies/organisatie/TypeVestiging>
+      <http://data.vlaanderen.be/ns/mandaat#Mandaat>
+      <http://data.lblod.info/vocabularies/leidinggevenden/Bestuursfunctie>
+    }
+    VALUES ?p {
+       <http://data.vlaanderen.be/ns/besluit#classificatie>
+       <http://data.vlaanderen.be/ns/mandaat#isTijdspecialisatieVan>
+       <http://mu.semte.ch/vocabularies/ext/kbonummer>
+       <http://purl.org/dc/terms/identifier>
+    }
+  }
+}
+
+;
+
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://mu.semte.ch/vocabularies/ext/BestuurseenheidClassificatieCode>.
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://mu.semte.ch/vocabularies/ext/BestuurseenheidClassificatieCode>.
+  }
+}
+
+
+#######################################################################
+# END
+# First remove the extra mappings.
+# This based on the conversion from the export.json of the op-producer.
+#######################################################################
+
+#######################################################################
+# START
+# This is a conversion from the export.json of the op-producer.
+# If you need to re-init; check again export.json from the op-producer
+#######################################################################
+
+# data in both graphs
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid> ;
+       ?p ?o.
+    VALUES ?p {
+      <http://mu.semte.ch/vocabularies/core/uuid>
+      <http://data.lblod.info/vocabularies/erediensten/betrokkenBestuur>
+      <http://data.lblod.info/vocabularies/erediensten/denominatie>
+      <http://data.lblod.info/vocabularies/erediensten/grensoverschrijdend>
+      <http://data.lblod.info/vocabularies/erediensten/typeEredienst>
+      <http://data.lblod.info/vocabularies/erediensten/wordtBediendDoor>
+      <http://data.vlaanderen.be/ns/besluit#werkingsgebied>
+      <http://www.opengis.net/ont/geosparql#sfWithin>
+      <http://www.w3.org/2002/07/owl#sameAs>
+      <http://www.w3.org/2004/02/skos/core#altLabel>
+      <http://www.w3.org/2004/02/skos/core#prefLabel>
+      <http://www.w3.org/ns/regorg#legalName>
+      <http://www.w3.org/ns/adms#identifier>
+      <http://www.w3.org/ns/org#changedBy>
+      <http://www.w3.org/ns/org#classification>
+      <http://www.w3.org/ns/org#hasPost>
+      <http://www.w3.org/ns/org#hasPrimarySite>
+      <http://www.w3.org/ns/org#hasSite>
+      <http://www.w3.org/ns/org#hasSubOrganization>
+      <http://www.w3.org/ns/org#linkedTo>
+      <http://www.w3.org/ns/org#resultedFrom>
+      <http://www.w3.org/ns/regorg#orgStatus>
+    }
+  }
+};
+
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://www.w3.org/ns/locn#Address> ;
+       ?p ?o.
+    VALUES ?p {
+      <http://mu.semte.ch/vocabularies/core/uuid>
+      <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.huisnummer>
+      <https://data.vlaanderen.be/ns/adres#Adresvoorstelling.busnummer>
+      <http://www.w3.org/ns/locn#thoroughfare>
+      <http://www.w3.org/ns/locn#postCode>
+      <https://data.vlaanderen.be/ns/adres#gemeentenaam>
+      <http://www.w3.org/ns/locn#adminUnitL2>
+      <https://data.vlaanderen.be/ns/adres#land>
+      <http://www.w3.org/ns/locn#fullAddress>
+      <https://data.vlaanderen.be/ns/adres#verwijstNaar>
+      <http://purl.org/dc/terms/source>
+    }
+  }
+};
+
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://schema.org/ContactPoint> ;
+       ?p ?o.
+    VALUES ?p {
+      <http://mu.semte.ch/vocabularies/core/uuid>
+      <http://www.w3.org/ns/locn#address>
+      <http://xmlns.com/foaf/0.1/page>
+      <http://schema.org/faxNumber>
+      <http://schema.org/contactType>
+      <http://xmlns.com/foaf/0.1/page>
+      <http://schema.org/email>
+      <http://schema.org/telephone>
+    }
+  }
+};
+
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://lblod.data.gift/vocabularies/organisatie/BestuurseenheidClassificatieCode> ;
+       ?p ?o.
+    VALUES ?p {
+      <http://mu.semte.ch/vocabularies/core/uuid>
+      <http://www.w3.org/2004/02/skos/core#prefLabel>
+    }
+  }
+};
+
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan> ;
+       ?p ?o.
+    VALUES ?p {
+      <http://mu.semte.ch/vocabularies/core/uuid>
+      <http://data.vlaanderen.be/ns/besluit#bestuurt>
+      <http://www.w3.org/ns/org#classification>
+      <http://data.vlaanderen.be/ns/mandaat#bindingEinde>
+      <http://data.vlaanderen.be/ns/mandaat#bindingStart>
+      <https://data.vlaanderen.be/ns/generiek#isTijdspecialisatieVan>
+      <http://www.w3.org/ns/org#hasPost>
+      <http://data.lblod.info/vocabularies/leidinggevenden/heeftBestuursfunctie>
+    }
+  }
+};
+
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://lblod.data.gift/vocabularies/organisatie/BestuursorgaanClassificatieCode> ;
+       ?p ?o.
+    VALUES ?p {
+      <http://mu.semte.ch/vocabularies/core/uuid>
+      <http://www.w3.org/2004/02/skos/core#prefLabel>
+    }
+  }
+};
+
+# ALl data is in the <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> graph
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> { ?s ?p ?o. }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a <http://data.lblod.info/vocabularies/leidinggevenden/Bestuursfunctie> ;
+       ?p ?o.
+    VALUES ?p {
+      <http://mu.semte.ch/vocabularies/core/uuid>
+      <http://www.w3.org/ns/org#role>
+      <http://www.w3.org/2004/02/skos/core#prefLabel>
+    }
+  }
+};
+
+# data in both graphs
+DELETE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a ?type .
+  }
+}
+WHERE {
+  GRAPH <http://mu.semte.ch/graphs/access-for-role/PubliekeBesluitendatabank-BesluitendatabankLezer> {
+    ?s a ?type .
+    VALUES ?type {
+      <http://data.lblod.info/vocabularies/erediensten/BestuurVanDeEredienst>
+      <http://data.lblod.info/vocabularies/erediensten/CentraalBestuurVanDeEredienst>
+      <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>
+      <http://www.w3.org/ns/regorg#RegisteredOrganization>
+      <http://data.lblod.info/vocabularies/erediensten/RepresentatiefOrgaan>
+      <http://data.lblod.info/vocabularies/erediensten/BetrokkenLokaleBesturen>
+      <http://data.lblod.info/vocabularies/erediensten/PositieBedienaar>
+      <http://www.w3.org/ns/org#Site>
+      <http://www.w3.org/ns/locn#Address>
+      <http://schema.org/ContactPoint>
+      <http://www.w3.org/ns/adms#Identifier>
+      <https://data.vlaanderen.be/ns/generiek#GestructureerdeIdentificator>
+      <http://lblod.data.gift/vocabularies/organisatie/BestuurseenheidClassificatieCode>
+      <http://data.vlaanderen.be/ns/besluit#Bestuursorgaan>
+      <http://lblod.data.gift/vocabularies/organisatie/TypeEredienst>
+      <http://lblod.data.gift/vocabularies/organisatie/BestuursorgaanClassificatieCode>
+      <http://www.w3.org/ns/org#ChangeEvent>
+      <http://lblod.data.gift/vocabularies/organisatie/Veranderingsgebeurtenis>
+      <http://lblod.data.gift/vocabularies/organisatie/OrganisatieStatusCode>
+      <http://lblod.data.gift/vocabularies/organisatie/TypeVestiging>
+      <http://data.vlaanderen.be/ns/mandaat#Mandaat>
+      <http://data.lblod.info/vocabularies/leidinggevenden/Bestuursfunctie>
+    }
+  }
+}
+#######################################################################
+# END
+# This is a conversion from the export.json of the op-producer.
+# If you need to re-init; check again export.json from the op-producer
+#######################################################################

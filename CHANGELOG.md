@@ -22,7 +22,7 @@ Then:
 ```
 drc up -d migrations && drc logs -ft --tail=200 migrations 
 # Wait until migrations are finished
-drc up -d op-public consumer
+drc up -d database op-public-consumer
 ```
 After the initialSync job is done, update the `docker-compose.override.yml`:
 ```

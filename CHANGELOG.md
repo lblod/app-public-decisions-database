@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## 1.19.6 (2025-02-13)
 - Add op-public-consumer [DL-6324]
 
 ### Deploy Notes

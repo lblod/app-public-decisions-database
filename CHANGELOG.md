@@ -1,4 +1,23 @@
 # Changelog
+
+## Unreleased
+
+- Update semantic forms with `Opdrachthoudende vereniging met private deelname` classification. [DL-6447]
+
+### Deploy Notes
+
+#### Update Semantic Forms
+
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+```
+```
+drc restart resource cache
+```
+```
+drc up -d enrich-submission
+```
+
 ## 1.19.6 (2025-02-13)
 - Add op-public-consumer [DL-6324]
 
@@ -20,7 +39,7 @@ Update the `docker-compose.override.yml`:
 
 Then:
 ```
-drc up -d migrations && drc logs -ft --tail=200 migrations 
+drc up -d migrations && drc logs -ft --tail=200 migrations
 # Wait until migrations are finished
 drc up -d database op-public-consumer
 ```

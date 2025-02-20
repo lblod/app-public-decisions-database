@@ -7,9 +7,12 @@ WHERE {
     ?s a ?type .
     VALUES ?type {
       <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>
-      <http://purl.org/dc/terms/Agent>
       <http://www.w3.org/ns/org#Organization>
     }
   }
-  FILTER (?p NOT IN (<http://www.w3.org/ns/adms#identifier>, <http://www.w3.org/ns/org#classification>))
+  FILTER (?p IN (
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,
+    <http://mu.semte.ch/vocabularies/core/uuid>,
+    <http://purl.org/dc/terms/identifier>
+  ))
 }

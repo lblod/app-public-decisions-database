@@ -66,5 +66,5 @@ services:
     restart: "no"
   op-consumer:
     restart: "no"
-  op-public-consumer:
+  op-consumer-for-auth:
     restart: "no"

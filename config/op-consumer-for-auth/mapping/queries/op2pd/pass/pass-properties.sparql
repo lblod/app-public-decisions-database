@@ -12,7 +12,6 @@ WHERE {
   }
   FILTER (?p IN (
     <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,
-    <http://mu.semte.ch/vocabularies/core/uuid>,
-    <http://purl.org/dc/terms/identifier>
+    <http://mu.semte.ch/vocabularies/core/uuid>
   ))
 }

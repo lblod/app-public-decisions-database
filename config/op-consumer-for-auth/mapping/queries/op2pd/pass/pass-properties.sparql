@@ -1,0 +1,17 @@
+CONSTRUCT {
+  ?s ?p ?o .
+}
+WHERE {
+  ?s ?p ?o .
+  FILTER EXISTS {
+    ?s a ?type .
+    VALUES ?type {
+      <http://data.vlaanderen.be/ns/besluit#Bestuurseenheid>
+      <http://www.w3.org/ns/org#Organization>
+    }
+  }
+  FILTER (?p IN (
+    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>,
+    <http://mu.semte.ch/vocabularies/core/uuid>
+  ))
+}

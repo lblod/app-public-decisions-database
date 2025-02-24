@@ -3,6 +3,7 @@
 ## Unreleased
 
 - Update semantic forms with `Opdrachthoudende vereniging met private deelname` classification. [DL-6447]
+- Add op-consumer-for-auth [DL-6458]
 
 ### Deploy Notes
 
@@ -16,6 +17,58 @@ drc restart resource cache
 ```
 ```
 drc up -d enrich-submission
+```
+
+#### Add second op-consumer
+
+```
+drc down
+```
+
+Update the `docker-compose.override.yml`, make sure to rename the first op-consumer since it had a rename, depending on the environment the first op-consumer should/should not run again (dev/qa already had an initialSync done):
+```
+  op-consumer:
+    environment:
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.vlaanderen.be" # or another endpoint
+      DCR_LANDING_ZONE_DATABASE: "virtuoso" # for the initial sync, we go directly to virtuoso
+      DCR_REMAPPING_DATABASE: "virtuoso" # for the initial sync, we go directly to virtuoso
+      DCR_DISABLE_DELTA_INGEST: "false"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+  op-consumer-for-auth:
+    environment:
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.vlaanderen.be" # choose the correct endpoint
+      DCR_LANDING_ZONE_DATABASE: "virtuoso" # for the initial sync, we go directly to virtuoso
+      DCR_REMAPPING_DATABASE: "virtuoso" # for the initial sync, we go directly to virtuoso
+      DCR_DISABLE_DELTA_INGEST: "false"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+```
+
+Then:
+```
+drc up -d virtuoso database op-consumer-for-auth
+# when deploying to prod, op-consumer also needs to run
+# drc up -d virtuoso database op-consumer op-consumer-for-auth
+```
+After the initialSync job is done, update the `docker-compose.override.yml`:
+```
+  op-consumer:
+    environment:
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.vlaanderen.be" # or another endpoint
+      DCR_LANDING_ZONE_DATABASE: "database"
+      DCR_REMAPPING_DATABASE: "database"
+      DCR_DISABLE_DELTA_INGEST: "false"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+  op-consumer-for-auth:
+    environment:
+      DCR_SYNC_BASE_URL: "https://organisaties.abb.vlaanderen.be" # choose the correct endpoint
+      DCR_LANDING_ZONE_DATABASE: "database"
+      DCR_REMAPPING_DATABASE: "database"
+      DCR_DISABLE_DELTA_INGEST: "false"
+      DCR_DISABLE_INITIAL_SYNC: "false"
+```
+
+```
+drc up -d
 ```
 
 ## 1.19.6 (2025-02-13)

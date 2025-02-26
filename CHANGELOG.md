@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.19.7 (2025-02-26)
 
 - Update semantic forms with `Opdrachthoudende vereniging met private deelname` classification. [DL-6447]
 - Add op-consumer-for-auth [DL-6458]

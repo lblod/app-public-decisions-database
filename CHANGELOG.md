@@ -1,4 +1,11 @@
 # Changelog
+## Unreleased
+- Add missing compose keys. [DL-6490]
+### Deploy Notes
+Before running the command, make sure to remove `restart: always` from `files-consumer` inside `docker-compose.override.yml`.
+```
+drc up -d submissions-consumer files-consumer
+```
 
 ## 1.19.7 (2025-02-26)
 

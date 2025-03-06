@@ -188,6 +188,8 @@ services:
         - ./config/submissions-consumer/submissions-dispatching:/config/triples-dispatching/custom-dispatching
         - ./data/files/consumer-files/submissions:/consumer-files/
         - ./data/files:/share
+      labels:
+        - "logging=true"
       restart: always
       logging: *default-logging
   files-consumer:
@@ -199,6 +201,8 @@ services:
       SOURCE_FILES_DATA_GRAPH: "http://mu.semte.ch/graphs/original-physical-files-data"
     volumes:
       - ./data/files:/share
+    restart: always
+    logging: *default-logging
   ################################################################################
   # OP CONSUMERS
   ################################################################################

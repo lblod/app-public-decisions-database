@@ -185,7 +185,7 @@ services:
         BYPASS_MU_AUTH_FOR_EXPENSIVE_QUERIES: 'true'
         FILE_SYNC_GRAPH: "http://mu.semte.ch/graphs/original-physical-files-data"
       volumes:
-        - ./config/submissions-consumer/submissions-dispatching:/config/triples-dispatching/custom-dispatching
+        - ./config/delta-consumers/submissions-consumer/submissions-dispatching:/config/triples-dispatching/custom-dispatching
         - ./data/files/consumer-files/submissions:/consumer-files/
         - ./data/files:/share
       labels:
@@ -226,7 +226,7 @@ services:
       SUDO_QUERY_RETRY_FOR_HTTP_STATUS_CODES: "404,500,503"
       SUDO_QUERY_RETRY: "true"
     volumes:
-      - ./config/op-consumer/mapping:/config/mapping
+      - ./config/delta-consumers/op-consumer/mapping:/config/mapping
       - ./data/files/consumer-files/op-public:/consumer-files/
     restart: always
     labels:
@@ -253,7 +253,7 @@ services:
       SUDO_QUERY_RETRY_FOR_HTTP_STATUS_CODES: "404,500,503"
       SUDO_QUERY_RETRY: "true"
     volumes:
-      - ./config/op-consumer-for-auth/mapping:/config/mapping
+      - ./config/delta-consumers/op-consumer-for-auth/mapping:/config/mapping
       - ./data/files/consumer-files/op-public:/consumer-files/
     restart: always
     labels:

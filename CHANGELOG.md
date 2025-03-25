@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## 1.20.0 (2025-03-25)
 - Add missing compose keys. [DL-6490]
 - Reorganize delta consumers config to harmonize with the ecosystem
 ### Deploy Notes

@@ -1,4 +1,12 @@
 # Changelog
+## Unreleased
+- Update multiple forms. [DL-6602] [DL-6486] [DL-6487] [DL-6488]
+### Deploy Notes
+#### For updating the forms
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+drc up -d enrich-submission
+```
 ## 1.20.0 (2025-03-25)
 - Add missing compose keys. [DL-6490]
 - Reorganize delta consumers config to harmonize with the ecosystem

@@ -1,4 +1,16 @@
 # Changelog
+
+## Unreleased
+
+- Add new form 'melding interne beslissing tot samenvoeging' [DL-6361]
+
+### Deploy Notes
+
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+drc up -d enrich-submission
+```
+
 ## 1.21.0 (2025-04-24)
 - Update multiple forms. [DL-6602] [DL-6486] [DL-6487] [DL-6488]
 ### Deploy Notes

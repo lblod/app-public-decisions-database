@@ -1,6 +1,6 @@
 # Changelog
 
-## Unreleased
+## 1.22.0 (2025-05-07)
 
 - Add new form 'melding interne beslissing tot samenvoeging' [DL-6361]
 

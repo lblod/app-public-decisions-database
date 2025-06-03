@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.22.1 (2025-06-03)
+- Bump ES
+### Deploy Notes
+```
+drc up -d elasticsearch
+```
 ## 1.22.0 (2025-05-07)
 
 - Add new form 'melding interne beslissing tot samenvoeging' [DL-6361]

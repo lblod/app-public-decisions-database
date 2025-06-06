@@ -17,7 +17,7 @@ services:
     restart: always
     logging: *default-logging
   identifier:
-    image: semtech/mu-identifier:1.9.1
+    image: semtech/mu-identifier:1.11.0
     links:
       - dispatcher:dispatcher
     labels:
@@ -35,7 +35,7 @@ services:
     restart: always
     logging: *default-logging
   deltanotifier:
-    image: cecemel/delta-notifier:0.2.0-beta.2
+    image: semtech/mu-delta-notifier:0.4.0
     volumes:
       - ./config/delta:/config
     labels:
@@ -43,7 +43,7 @@ services:
     restart: always
     logging: *default-logging
   virtuoso:
-    image: tenforce/virtuoso:1.3.2-virtuoso7.2.5.1
+    image: redpencil/virtuoso:1.3.0-rc.1
     environment:
       SPARQL_UPDATE: "true"
       DEFAULT_GRAPH: "http://mu.semte.ch/application"
@@ -56,7 +56,7 @@ services:
     restart: always
     logging: *default-logging
   resource:
-    image: semtech/mu-cl-resources:1.20.0
+    image: semtech/mu-cl-resources:1.27.0
     environment:
       CACHE_CLEAR_PATH: "http://cache/.mu/clear-keys"
     volumes:
@@ -66,7 +66,7 @@ services:
     restart: always
     logging: *default-logging
   login:
-    image: lblod/acmidm-login-service:0.10.0-beta.1
+    image: lblod/acmidm-login-service:0.12.0
     environment:
       MU_APPLICATION_AUTH_DISCOVERY_URL: "https://authenticatie-ti.vlaanderen.be/op"
       MU_APPLICATION_AUTH_CLIENT_ID: "b772fce4-ebd8-4980-b51c-8e0d73fe75d2"
@@ -80,7 +80,7 @@ services:
     restart: always
     logging: *default-logging
   database:
-    image: semtech/mu-authorization:0.6.0-beta.7
+    image: semtech/mu-authorization:0.6.0-beta.8
     environment:
       MU_SPARQL_ENDPOINT: "http://virtuoso:8890/sparql"
     volumes:
@@ -98,7 +98,7 @@ services:
     restart: always
     logging: *default-logging
   migrations:
-    image: semtech/mu-migrations-service:0.6.0
+    image: semtech/mu-migrations-service:0.9.0
     environment:
       MU_SPARQL_TIMEOUT: '300'
     links:
@@ -110,7 +110,7 @@ services:
     restart: always
     logging: *default-logging
   file:
-    image: semtech/mu-file-service:3.2.0
+    image: semtech/mu-file-service:3.4.0
     volumes:
       - ./data/files:/share
     labels:
@@ -118,7 +118,7 @@ services:
     restart: always
     logging: *default-logging
   search:
-    image: semtech/mu-search:0.8.0-beta.3
+    image: semtech/mu-search:feature-ignored_allowed_groups
     volumes:
       - ./config/search:/config
       - ./data/files:/data
@@ -144,7 +144,7 @@ services:
     labels:
       - "logging=true"
   search-query-management:
-    image: lblod/toezicht-search-query-management-service:0.3.6
+    image: lblod/toezicht-search-query-management-service:0.3.7
     volumes:
       - ./config/search-query:/share/search-query
     labels:
@@ -152,7 +152,7 @@ services:
     restart: always
     logging: *default-logging
   enrich-submission:
-    image: lblod/enrich-submission-service:1.13.2
+    image: lblod/enrich-submission-service:1.13.5
     volumes:
       - ./config/semantic-forms:/share/semantic-forms
       - ./data/files/submissions:/share/submissions
@@ -169,7 +169,7 @@ services:
 # DELTAS
 ################################################################################
   submissions-consumer:
-      image: lblod/delta-consumer:0.0.24
+      image: lblod/delta-consumer:0.1.6
       environment:
         DCR_SYNC_BASE_URL: 'https://loket.lblod.info/'
         DCR_SERVICE_NAME: 'submissions-consumer'
@@ -207,7 +207,7 @@ services:
   # OP CONSUMERS
   ################################################################################
   op-consumer:
-    image: lblod/delta-consumer:0.1.1
+    image: lblod/delta-consumer:0.1.6
     environment:
       DCR_SERVICE_NAME: "op-consumer"
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # replace with link to OP API
@@ -234,7 +234,7 @@ services:
     logging: *default-logging
   # Some data is needed in the public graph for acm/idm to work
   op-consumer-for-auth:
-    image: lblod/delta-consumer:0.1.1
+    image: lblod/delta-consumer:0.1.6
     environment:
       DCR_SERVICE_NAME: "op-consumer-for-auth"
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # replace with link to OP API

@@ -6,7 +6,7 @@
 drc down
 rm data/db/virtuoso.trx # Note: this is hard but not much risk.
 drc pull
-/bin/bash config/scripts/reset-elastic.sh # (until the mu-cli version stabelizes)
+/bin/bash ./config/scripts/reset-elastic.sh # (until the mu-cli version stabelizes)
 ```
 
 ## 1.22.1 (2025-06-03)

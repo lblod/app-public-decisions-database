@@ -2,8 +2,12 @@
 ## hotfix (unreleased)
 - Mega maintenance spree
 ### deploy notes
+
 ```
 drc down
+```
+Remove the version specification (probably it will mention `version: '3.7'`) in the top of the file: `docker-compose.override.yml`.
+```
 rm data/db/virtuoso.trx # Note: this is hard but not much risk.
 drc pull
 /bin/bash ./config/scripts/reset-elastic.sh # (until the mu-cli version stabelizes)

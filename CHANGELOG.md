@@ -11,6 +11,8 @@ Remove the version specification (probably it will mention `version: '3.7'`) in 
 rm data/db/virtuoso.trx # Note: this is hard but not much risk.
 drc pull
 /bin/bash ./config/scripts/reset-elastic.sh # (until the mu-cli version stabelizes)
+# while it's running best disable the syncs
+drc stop  op-consumer-for-auth op-consumer files-consumer submissions-consumer
 ```
 
 ## 1.22.1 (2025-06-03)

@@ -1,6 +1,7 @@
 # Changelog
-## hotfix (unreleased)
-- Mega maintenance spree
+## 1.22.2 (2025-06-25)
+- Mega maintenance spree.
+  SeeAlso: DL-6663, DL-6662
 ### deploy notes
 
 ```

@@ -1,4 +1,15 @@
 # Changelog
+## 1.23.0 (2025-06-12)
+
+- Update form of LEKP - Fietspaden [DL-6612]
+
+### Deploy Notes
+
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+drc up -d enrich-submission
+```
+
 ## 1.22.2 (2025-06-25)
 - Mega maintenance spree.
   SeeAlso: DL-6663, DL-6662
@@ -14,17 +25,6 @@ drc pull
 /bin/bash ./config/scripts/reset-elastic.sh # (until the mu-cli version stabelizes)
 # while it's running best disable the syncs
 drc stop  op-consumer-for-auth op-consumer files-consumer submissions-consumer
-```
-
-## 1.23.0 (2025-06-12)
-
-- Update form of LEKP - Fietspaden [DL-6612]
-
-### Deploy Notes
-
-```
-drc restart migrations && drc logs -ft --tail=200 migrations
-drc up -d enrich-submission
 ```
 
 ## 1.22.1 (2025-06-03)

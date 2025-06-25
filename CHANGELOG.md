@@ -1,4 +1,20 @@
 # Changelog
+## 1.22.2 (2025-06-25)
+- Mega maintenance spree.
+  SeeAlso: DL-6663, DL-6662
+### deploy notes
+
+```
+drc down
+```
+Remove the version specification (probably it will mention `version: '3.7'`) in the top of the file: `docker-compose.override.yml`.
+```
+rm data/db/virtuoso.trx # Note: this is hard but not much risk.
+drc pull
+/bin/bash ./config/scripts/reset-elastic.sh # (until the mu-cli version stabelizes)
+# while it's running best disable the syncs
+drc stop  op-consumer-for-auth op-consumer files-consumer submissions-consumer
+```
 
 ## 1.23.0 (2025-06-12)
 

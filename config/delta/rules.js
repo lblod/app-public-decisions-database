@@ -10,8 +10,7 @@ export default [
     options: {
       resourceFormat: "v0.0.1",
       gracePeriod: 1000,
-      ignoreFromSelf: true,
-      optOutMuScopeIds: [ "http://redpencil.data.gift/id/concept/muScope/deltas/consumer/initialSync" ]
+      ignoreFromSelf: true
     }
   },
   {
@@ -25,8 +24,7 @@ export default [
     options: {
       resourceFormat: "v0.0.1",
       gracePeriod: 10000,
-      ignoreFromSelf: true,
-      optOutMuScopeIds: [ "http://redpencil.data.gift/id/concept/muScope/deltas/consumer/initialSync" ]
+      ignoreFromSelf: true
     }
   },
   {

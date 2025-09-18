@@ -1,4 +1,14 @@
 # Changelog
+## Unreleased
+- Update URI form "Afwijking principes regiovorming" [DL-6775]
+
+### Deploy Notes
+
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+drc up -d enrich-submission
+```
+
 ## 1.23.1 (2025-06-27)
 
 - Frontend [v1.10.0](https://github.com/lblod/frontend-public-decisions/blob/master/CHANGELOG.md#v1100-2025-06-25) (DL-6689)

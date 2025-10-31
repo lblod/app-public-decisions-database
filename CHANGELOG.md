@@ -1,4 +1,15 @@
 # Changelog
+## Unreleased
+
+- Update forms [DL-6988]
+
+### Deploy Notes
+
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+drc up -d enrich-submission
+```
+
 ## v1.24.1 (2025-09-19)
 - Hotfix 'afwijking principes regiovorming' from BesluitDocumentType to BesluitType [DL-6775]
 ## v1.24.0 (2025-09-18)

@@ -1,4 +1,14 @@
 # Changelog
+## unreleased
+
+- Swap `mu-auth` for `sparql-parser` [DL-6571]
+
+### Deploy Notes
+
+```
+drc up -d database
+```
+
 ## v1.25.0 (2025-11-07)
 
 - Update forms [DL-6988]

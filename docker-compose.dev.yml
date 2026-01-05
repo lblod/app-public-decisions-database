@@ -42,7 +42,6 @@ services:
       LOG_SCOPE_AUTHORIZATION: "debug"
       LOG_SCOPE_SPARQL: "debug"
       LOG_SCOPE_ELASTICSEARCH: "debug"
-      LOG_SCOPE_SEARCH: "debug"
     restart: "no"
   elasticsearch:
     restart: "no"

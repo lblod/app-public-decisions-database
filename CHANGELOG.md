@@ -6,8 +6,9 @@
 ### Deploy Notes
 
 ```
-drc up -d database
+drc up -d database search
 ```
+The flush the index (old skool way): `/bin/bash tunnel-loket.sh`
 
 ## v1.25.0 (2025-11-07)
 

@@ -109,7 +109,7 @@ To proceed:
     }
     ORDER BY DESC(?created)
 ```
-7. [OPTIONAL] Sometimes things might go wrong. It can help to rebuild the index ``/bin/bash config/scripts/reset-elastic.sh` to troubleshoot.
+7. [OPTIONAL] Sometimes things might go wrong. It can help to rebuild the index via "mu script search manage-indexes"
 8. Once ok, you will have to enable automatic-syncing for the files consumer
 ```
 # (...)

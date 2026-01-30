@@ -1,5 +1,5 @@
 # Changelog
-## unreleased
+## v1.25.1 (2025-01-30)
 
 - Swap `mu-auth` for `sparql-parser` [DL-6571]
 

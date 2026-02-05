@@ -6,6 +6,7 @@
   "number_of_threads": 10,
   "ignored_allowed_groups": [{ "name": "org", "variables": ["*"] }],
   "attachments_path_base": "/data/",
+  "ignored_allowed_groups": [ { "name": "logged-in-or-impersonating", "variables": ["*"] } ],
   "eager_indexing_groups": [
     [
       {
@@ -21,7 +22,7 @@
     ],
     [
       {
-        "name": "readers",
+        "name": "BesluitendatabankGebruiker",
         "variables": []
       }
     ]

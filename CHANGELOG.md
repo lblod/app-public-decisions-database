@@ -1,4 +1,7 @@
 # Changelog
+## v1.25.2 (2025-02-05)
+  - Fix mu-search config: ensure a ignore groups are added. [DL-7140]
+
 ## v1.25.1 (2025-01-30)
 
 - Swap `mu-auth` for `sparql-parser` [DL-6571]

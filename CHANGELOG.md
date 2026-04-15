@@ -1,4 +1,13 @@
 # Changelog
+## Unreleased
+- Add gemeenteweg decision types [DL-7179]
+
+### Deploy Notes
+
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+```
+
 ## v1.25.2 (2025-02-05)
   - Fix mu-search config: ensure a ignore groups are added. [DL-7140]
 

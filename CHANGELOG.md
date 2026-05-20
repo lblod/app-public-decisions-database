@@ -1,5 +1,5 @@
 # Changelog
-## Unreleased
+## v1.26.0 (2026-05-20)
 - Add gemeenteweg decision types [DL-7179]
 
 ### Deploy Notes
@@ -8,10 +8,10 @@
 drc restart migrations && drc logs -ft --tail=200 migrations
 ```
 
-## v1.25.2 (2025-02-05)
+## v1.25.2 (2026-02-05)
   - Fix mu-search config: ensure a ignore groups are added. [DL-7140]
 
-## v1.25.1 (2025-01-30)
+## v1.25.1 (2026-01-30)
 
 - Swap `mu-auth` for `sparql-parser` [DL-6571]
 

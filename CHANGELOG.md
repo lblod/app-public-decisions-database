@@ -1,4 +1,15 @@
 # Changelog
+## v1.27.0 (2026-07-14)
+
+- Update forms [DL-7470]
+
+### Deploy Notes
+
+```
+drc restart migrations && drc logs -ft --tail=200 migrations
+drc up -d enrich-submission
+```
+
 ## v1.26.0 (2026-05-20)
 - Add gemeenteweg decision types [DL-7179]
 

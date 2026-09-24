@@ -53,6 +53,16 @@ services:
     restart: "no"
   submissions-consumer:
     restart: "no"
+    volumes:
+       - /home/nbittich/work/lblod/delta-consumer/:/app/
+    environment:
+      - NODE_ENV=development
+  frontend-dashboard:
+    environment:
+      EMBER_LOGIN_ROUTE: "mock-login"
+    restart: "no"
+  login-dashboard:
+    restart: "no"
   kibana:
     image: docker.elastic.co/kibana/kibana:7.2.0
     environment:
@@ -66,3 +76,5 @@ services:
     restart: "no"
   op-consumer-for-auth:
     restart: "no"
+
+  

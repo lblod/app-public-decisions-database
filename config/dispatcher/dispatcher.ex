@@ -12,6 +12,31 @@ defmodule Dispatcher do
   @turtle %{ accept: %{ turtle: true } }
   @html %{ accept: %{ html: true } }
   @json %{ accept: %{ json: true } }
+  define_layers [ :api_services, :api, :frontend, :not_found ]
+
+
+ ###############
+  # DASHBOARD
+  ###############
+  match "/jobs/*path", %{accept: [:json]} do
+    Proxy.forward(conn, path, "http://cache/jobs/")
+  end
+
+  match "/tasks/*path", %{accept: [:json]} do
+    Proxy.forward(conn, path, "http://cache/tasks/")
+  end
+
+  match "/job-errors/*path", %{accept: [:json]} do
+    Proxy.forward(conn, path, "http://cache/job-errors/")
+  end
+
+  match "/data-containers/*path", %{accept: [:json]} do
+    Proxy.forward(conn, path, "http://cache/data-containers/")
+  end
+
+  match "/reports/*path", %{accept: [:json]} do
+    Proxy.forward(conn, path, "http://resource/reports/")
+  end
 
   ###############################################################
   # Registration and login
@@ -28,6 +53,10 @@ defmodule Dispatcher do
   end
   match "/mock/sessions/*path", @json do
     Proxy.forward conn, path, "http://mocklogin/sessions/"
+  end
+
+  match "/sessions/*path", %{ reverse_host: ["dashboard" | _rest] } do
+    Proxy.forward conn, path, "http://login-dashboard/sessions/"
   end
 
 
@@ -145,6 +174,20 @@ defmodule Dispatcher do
   ###############################################################
   # Frontend
   ###############################################################
+  get "/assets/*path",  %{ reverse_host: ["dashboard" | _rest] }  do
+    forward conn, path, "http://frontend-dashboard/assets/"
+  end
+
+  get "/@appuniversum/*path", %{ reverse_host: ["dashboard" | _rest]} do
+    forward conn, path, "http://frontend-dashboard/@appuniversum/"
+  end
+
+  match "/*_path", %{ reverse_host: ["dashboard" | _rest] } do
+    # *_path allows a path to be supplied, but will not yield
+    # an error that we don't use the path variable.
+    forward conn, [], "http://frontend-dashboard/index.html"
+  end
+
   get "/favicon.ico", @any do
     send_resp( conn, 404, "" )
   end

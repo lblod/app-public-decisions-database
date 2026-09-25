@@ -1,4 +1,17 @@
 # Changelog
+## v1.28.0 (2026-09-?)
+
+- Add job dashboard [OP-3569]
+
+### Deploy Notes
+
+NOTE: It requires a new ACM/IDM role `AdminDashboardPDD`
+
+```
+drc up -d
+drc restart database resource cache dispatcher
+```
+
 ## v1.27.0 (2026-07-14)
 
 - Update forms [DL-7470]

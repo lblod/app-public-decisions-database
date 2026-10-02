@@ -29,6 +29,9 @@
 
 ;; Prefixes used in the constraints below (not in the SPARQL queries)
 (define-prefixes
+  :cogs "http://vocab.deri.ie/cogs#"
+  :reporting "http://lblod.data.gift/vocabularies/reporting/"
+  :core "http://open-services.net/ns/core#"
   :besluit "http://data.vlaanderen.be/ns/besluit#"
   :adms "http://www.w3.org/ns/adms#"
   :nfo "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo#"
@@ -70,6 +73,17 @@
   ("http://lblod.data.gift/vocabularies/besluit/TaxRate" -> _)
   ("http://lblod.data.gift/vocabularies/automatische-melding/FormData" -> _))
 
+(define-graph reports ("http://mu.semte.ch/graphs/reports")
+  ("reporting:Report" -> _)
+  ("core:Error" -> _)
+  ("nfo:DataContainer" -> _)
+  ("nfo:FileDataObject" -> _))
+
+(define-graph jobs ("http://mu.semte.ch/graphs/system/jobs")
+  ("cogs:Job" -> _)
+  ("nfo:DataContainer" -> _)
+  ("nfo:FileDataObject" -> _))
+
 (supply-allowed-group "public")
 
 (supply-allowed-group "logged-in-or-impersonating"
@@ -90,6 +104,14 @@
       FILTER( ?session_role = \"BesluitendatabankGebruiker\" )
     }")
 
+(supply-allowed-group "o-admin-rwf"
+  :parameters ()
+  :query "PREFIX ext: <http://mu.semte.ch/vocabularies/ext/>
+    SELECT DISTINCT ?session WHERE {
+      <SESSION_ID> ext:sessionRole \"AdminDashboardPDD\" .
+    }")
+
+
 (grant (read)
   :to-graph (public)
   :for-allowed-group "public")
@@ -101,3 +123,11 @@
 (grant (read)
   :to-graph (readers)
   :for-allowed-group "BesluitendatabankGebruiker")
+
+
+(grant (read write)
+  :to-graph (jobs)
+  :for-allowed-group "o-admin-rwf")
+(grant (read write)
+  :to-graph (reports)
+  :for-allowed-group "o-admin-rwf")

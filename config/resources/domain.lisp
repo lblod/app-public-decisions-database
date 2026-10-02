@@ -18,3 +18,5 @@
 (read-domain-file "slave-leidinggevenden-domain.lisp")
 (read-domain-file "master-submissions-domain.lisp")
 (read-domain-file "master-search-query.lisp")
+(read-domain-file "job.json")
+(read-domain-file "report.json")

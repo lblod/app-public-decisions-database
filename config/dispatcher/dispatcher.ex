@@ -45,6 +45,9 @@ defmodule Dispatcher do
   match "/accounts/*path", @json do
     Proxy.forward conn, path, "http://resource/accounts/"
   end
+  match "/groups/*path", @json do
+    Proxy.forward(conn, path, "http://resource/groups/")
+  end
   match "/gebruikers/*path", @json do
     Proxy.forward conn, path, "http://resource/gebruikers/"
   end

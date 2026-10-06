@@ -168,7 +168,7 @@ services:
 # DELTAS
 ################################################################################
   submissions-consumer:
-      image: lblod/delta-consumer:0.1.6
+      image: lblod/delta-consumer:0.4.1
       environment:
         DCR_SYNC_BASE_URL: 'https://loket.lblod.info/'
         DCR_SERVICE_NAME: 'submissions-consumer'
@@ -206,7 +206,7 @@ services:
   # OP CONSUMERS
   ################################################################################
   op-consumer:
-    image: lblod/delta-consumer:0.1.6
+    image: lblod/delta-consumer:0.4.1
     environment:
       DCR_SERVICE_NAME: "op-consumer"
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # replace with link to OP API
@@ -233,7 +233,7 @@ services:
     logging: *default-logging
   # Some data is needed in the public graph for acm/idm to work
   op-consumer-for-auth:
-    image: lblod/delta-consumer:0.1.6
+    image: lblod/delta-consumer:0.4.1
     environment:
       DCR_SERVICE_NAME: "op-consumer-for-auth"
       DCR_SYNC_BASE_URL: "https://organisaties.abb.lblod.info" # replace with link to OP API
